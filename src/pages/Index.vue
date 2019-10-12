@@ -7,32 +7,16 @@
 
     <!--<IconTitle title="Upcoming Events" image="sparkles.png"/>-->
 
-    <LazyHydrate when-visible>
+    <!--<LazyHydrate when-visible>
       <upcoming-events />
-    </LazyHydrate>
-    
-    <LazyHydrate when-visible>
-      <home-how-it-work-simple />
-    </LazyHydrate>
-    
-    <LazyHydrate when-visible>
-      <home-features />
-    </LazyHydrate>
+    </LazyHydrate>-->
 
     <LazyHydrate when-visible>
-      <home-connect />
+      <event-cards />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
       <home-examples />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <home-community />
-    </LazyHydrate>
-
-    <LazyHydrate when-visible>
-      <home-blog />
     </LazyHydrate>
     
   </Layout>
@@ -51,6 +35,7 @@ import HomeConnect from '@/components/home/HomeConnect.vue'
 import UpcomingEvents from '@/components/about/UpcomingEvents.vue'
 import IconTitle from '@/components/about/IconTitle.vue'
 import IntroCynthia from '@/components/about/IntroCynthia.vue'
+import EventCards from '@/components/about/EventCards.vue'
 
 export default {
   components: {
@@ -64,7 +49,8 @@ export default {
     HomeBlog,
     UpcomingEvents,
     IconTitle,
-    IntroCynthia
+    IntroCynthia,
+    EventCards
   },
   
   metaInfo: {

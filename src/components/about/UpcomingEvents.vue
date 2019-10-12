@@ -1,9 +1,9 @@
 <template>
   <Section class="upcoming-events">
     <div class="grid-cols grid-cols--gap-large grid-cols--full-md">
-      <Card title="Upcoming Events">
-        <h4>CMSs</h4>
-        <p>Any Headless CMS, Contentful, WordPress, Drupal, Sanity.io, etc.</p>
+      <Card title="✨Upcoming Events">
+        <h4>Vue Berne Meetup</h4>
+        <p>Let's have a nice evening with a talk from Gusto, optional attendees talks/panels and mostly networking & drinks.</p>
         <h4>Data</h4>
         <p>Any APIs, Databases, AirTable, YAML, CSV, JSON, etc.</p>
         <h4>Markdown</h4>
@@ -33,14 +33,11 @@
         </template>
       </Card>
 
-      <Card title="Past Events">
-        <ul class="title flex text-left flex--start">
-          <li>
-            Text
-            <img src="/assets/static/src/assets/images/cynthia.png" class="title--image" width="28" height="28" />
-          </li>
-          <li class="title--date">(Nov 20th, 2019)</li>
-        </ul>
+      <Card title="🥀 Past Events">
+        <div class="flex text-left flex--center">
+            <strong>Vue Basel</strong>
+            <img src="/assets/static/src/assets/images/cynthia.png" class="title--image" width="40" height="40" />
+        </div>
         <p>Any Headless CMS, Contentful, WordPress, Drupal, Sanity.io, etc.</p>
         <h4>Data</h4>
         <p>Any APIs, Databases, AirTable, YAML, CSV, JSON, etc.</p>
