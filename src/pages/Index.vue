@@ -2,7 +2,17 @@
   <Layout class="layout-homepage">
 
     <LazyHydrate when-idle>
+      <intro-cynthia />
+    </LazyHydrate>
+
+    <LazyHydrate when-idle>
       <home-intro-simple />
+    </LazyHydrate>
+
+    <IconTitle title="Upcoming Events" image="spark.png"/>
+
+    <LazyHydrate when-visible>
+      <upcoming-events />
     </LazyHydrate>
     
     <LazyHydrate when-visible>
@@ -42,6 +52,10 @@ import HomeExamples from '@/components/home/HomeExamples.vue'
 import HomeCommunity from '@/components/home/HomeCommunity.vue'
 import HomeConnect from '@/components/home/HomeConnect.vue'
 
+import UpcomingEvents from '@/components/about/UpcomingEvents.vue'
+import IconTitle from '@/components/about/IconTitle.vue'
+import IntroCynthia from '@/components/about/IntroCynthia.vue'
+
 export default {
   components: {
     LazyHydrate,
@@ -51,7 +65,10 @@ export default {
     HomeCommunity,
     HomeConnect,
     HomeFeatures,
-    HomeBlog
+    HomeBlog,
+    UpcomingEvents,
+    IconTitle,
+    IntroCynthia
   },
   
   metaInfo: {
