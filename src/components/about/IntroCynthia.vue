@@ -1,27 +1,34 @@
 <template>
   <Section class="intro" dots="true">
-    <div class="container text-center ">
+    <div class="container text-center">
+      <div class="intro__message mb" hidden></div>
 
-        <div class="intro__message mb" hidden></div>
+      <h1 class="intro__title">
+        <span>Hey, I'm Cynthia 🙋</span>
+         <Avatar class="intro__image"/>
+        <transition name="rotate">
+          <div
+            class="intro__subtitle"
+            v-if="currentText == 0"
+            key="0"
+          >A passionate software developer</div>
+          <div
+            class="intro__subtitle"
+            v-else-if="currentText == 1"
+            key="1"
+          >The Vue Vixens Switzerland Chapter Leader</div>
+          <div
+            class="intro__subtitle"
+            v-else-if="currentText == 2"
+            key="2"
+          >The Vue Berne Meetup Organizer</div>
+        </transition>
+      </h1>
 
-        <h1 class="intro__title">
-          <span>Hey, I'm Cynthia 🙋</span>
-          <transition name="rotate">
-            <div class="intro__subtitle" v-if="currentText == 0" key="0">
-              A passionate software developer
-            </div>
-            <div class="intro__subtitle" v-else-if="currentText == 1" key="1">
-              The Vue Vixens Switzerland Chapter Leader
-            </div>
-            <div class="intro__subtitle" v-else-if="currentText == 2" key="2">
-              The Vue Berne Meetup Organizer
-            </div>
-          </transition>
-        </h1>
-
-        <p class="intro__lead lead post mb">
-          Feel free to follow me on <g-link href="https://twitter.com/lady_mashiro">Twitter</g-link>
-        </p>
+      <p class="intro__lead lead post mb">
+        Feel free to follow me on
+        <g-link href="https://twitter.com/lady_mashiro">Twitter</g-link>
+      </p>
     </div>
   </Section>
 </template>
@@ -35,25 +42,28 @@ query HomeIntro {
 </static-query>
 
 <script>
+import Avatar from "~/components/about/Avatar.vue";
 export default {
-  data () {
+  components: {
+    Avatar
+  },
+  data() {
     return {
       currentText: 0
-    }
+    };
   },
-  mounted () {
+  mounted() {
     this._counter = setInterval(() => {
-      this.currentText = (this.currentText + 1) % 3
-    }, 2500)
+      this.currentText = (this.currentText + 1) % 3;
+    }, 2500);
   },
-  destroyed () {
-    clearTimeout(this._counter)
-  },
-}
+  destroyed() {
+    clearTimeout(this._counter);
+  }
+};
 </script>
 
 <style lang="scss">
-
 .intro {
   padding: calc(2% + var(--space)) 0;
 
@@ -71,7 +81,6 @@ export default {
   }
 
   &__subtitle {
-    margin-top: 30px;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -97,7 +106,11 @@ export default {
   }
 
   &__info {
-    font-size: .9rem;
+    font-size: 0.9rem;
+  }
+
+  &__image {
+      margin-top: 30px;
   }
 }
 </style>
