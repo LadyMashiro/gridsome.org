@@ -5,11 +5,7 @@
       <intro-cynthia />
     </LazyHydrate>
 
-    <LazyHydrate when-idle>
-      <home-intro-simple />
-    </LazyHydrate>
-
-    <IconTitle title="Upcoming Events" image="spark.png"/>
+    <!--<IconTitle title="Upcoming Events" image="sparkles.png"/>-->
 
     <LazyHydrate when-visible>
       <upcoming-events />

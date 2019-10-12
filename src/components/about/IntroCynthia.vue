@@ -25,10 +25,10 @@
         </transition>
       </h1>
 
-      <p class="intro__lead lead post mb">
+      <!--<p class="intro__lead lead post mb">
         Feel free to follow me on
         <g-link href="https://twitter.com/lady_mashiro">Twitter</g-link>
-      </p>
+      </p>-->
     </div>
   </Section>
 </template>
@@ -68,7 +68,7 @@ export default {
   padding: calc(2% + var(--space)) 0;
 
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -84,7 +84,7 @@ export default {
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
-
+    font-size: 1.5rem;
     @media screen and (max-width: 850px) {
       & {
         font-size: 1.5rem;
