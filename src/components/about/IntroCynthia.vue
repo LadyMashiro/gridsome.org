@@ -16,12 +16,12 @@
             class="intro__subtitle"
             v-else-if="currentText == 1"
             key="1"
-          >The Vue Vixens Switzerland Chapter Leader</div>
+          >Vue Vixens Switzerland Chapter Leader</div>
           <div
             class="intro__subtitle"
             v-else-if="currentText == 2"
             key="2"
-          >The Vue Berne Meetup Organizer</div>
+          >Vue Berne Meetup Organizer</div>
         </transition>
       </h1>
 
